@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="ingresar">
+    <p>Ingresar</p>
+  </div>
+  <div class="contenido">
+    
+    <div class="formulario">
+      <h5>Welcome to Answers</h5>
+      <p>Login to your account</p>
+      <div class="form">
+        <div class="items">
+          <ion-item>
+            <ion-input placeholder="Email" [(ngModel)]="user.email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input  placeholder="Usuario" [(ngModel)]="user.username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input  placeholder="Contraseña" type="password" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input  placeholder="Repetir Contraseña" type="password" [(ngModel)]="repeatPassword"></ion-input>
+          </ion-item>
+          <ion-button (click)="registerUser()">Registrarse</ion-button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

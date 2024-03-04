@@ -1,0 +1,93 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="header">
+    <div class="title">
+      <p>{{userInformation.name}} {{userInformation.apellido}}</p>
+    </div>
+    <div class="menu">
+      <ion-button fill="clear">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+  <div class="subscription">
+    <p
+    *ngIf="subscriptionActivated"  
+    [ngClass]="{'green':subscriptionActivated == true}"
+    >suscripcion Activa</p>
+
+    <p *ngIf="!subscriptionActivated"
+    [ngClass]="{'red':subscriptionActivated == false}">Suscripcion Inactiva</p>
+  </div>
+  <div class="content">
+    <ion-card>
+      <div class="resumen">
+        <p>Llevas ahorrado</p>
+        <h2>$0</h2>
+        <p>con club Vip</p>
+      </div>
+      <div class="logo">
+        <img class="logoImg" src="/assets/logotipo.png" alt="">
+      </div>
+    </ion-card>
+
+
+    <div class="menuProfile">
+      <div class="item">
+        <div class="title" (click)="gotoActivatedSubscription()">
+          <ion-icon name="cash-outline"></ion-icon>
+          <p>Administrar Suscripcion</p>
+        </div>
+        <div class="next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          <ion-icon name="ticket-outline"></ion-icon>
+          <p>Mis Canjes</p>
+        </div>
+        <div class="next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          <ion-icon name="headset-outline"></ion-icon>
+          <p>Soporte</p>
+        </div>
+        <div class="next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <p>Terminos y condiciones</p>
+        </div>
+        <div class="next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          <ion-icon name="bug-outline"></ion-icon>
+          <p>Reportar un problema</p>
+        </div>
+        <div class="next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          <ion-icon name="power-outline"></ion-icon>
+          <p>Cerrar Sesion</p>
+        </div>
+        <div class="next">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

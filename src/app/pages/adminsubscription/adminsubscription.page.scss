@@ -1,0 +1,54 @@
+ion-content{
+    --background:rgb(245, 245, 245);
+    .header{
+        width: 100%;
+        display: flex;
+        .title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                color:gray
+            }
+        }
+
+    }
+
+    .subscription{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .green{
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+        }
+        .red{
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+
+    .text{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        p{
+            text-align: center;
+            padding: 20px;
+        }
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        ion-button{
+            width: 80%;
+        }
+    }
+}

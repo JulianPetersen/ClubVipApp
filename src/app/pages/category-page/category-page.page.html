@@ -1,0 +1,19 @@
+
+<ion-content [fullscreen]="true">
+  
+  <div class="header">
+    <div class="backbutton" (click)="backButton()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+    <div class="title">
+      <h4>{{categoryName}}</h4>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="ofer" *ngFor="let ofer of oferts">
+      <img src="{{ofer.imgUrl}}" alt="" (click)="goToDetailCupon(ofer._id)">
+    </div>
+  </div>
+</ion-content>

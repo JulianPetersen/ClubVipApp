@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true">
+  <div class="welcome">
+    <h4>Bienvenido {{name}}</h4>
+    <p>Actualemte llevas $1000 Ahorrados</p>
+  </div>
+
+  <div class="superOfers">
+    <swiper-container
+       slides-per-view="1"
+       slidesPerView="1"
+       pagination="true"
+       autoplay="true"
+      >
+        <swiper-slide>
+          <img src="/assets/superofer1.jpg" alt="">
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/assets/superofer2.jpg" alt="">
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/assets/superofer3.jpg" alt="">
+        </swiper-slide>
+      </swiper-container>
+  </div>
+ 
+  <div class="categories">
+    <div class="title">
+      <h6>
+        ¿Que estas  buscando?
+      </h6>
+    </div>
+    <div class="listCategories" >
+      <div class="categorie" *ngFor="let cat of AllCategories">
+        <img class="imgCategorie" src="{{cat.imgUrl}}" alt="" (click)="goToCategoriePage(cat._id)">
+        <p>{{cat.name}}</p>
+      </div>
+    </div>
+
+    <div class="swipperOferts">
+      <div class="title">
+        <h6>
+          Ofertas Hot
+        </h6>
+        <ion-icon name="flame"></ion-icon>
+      </div>
+      
+      
+      <swiper-container
+       slides-per-view="3"
+       class="categories-swiper"
+       slidesPerView="1"
+       pagintaion-dynamic-bullets="false"
+      >
+        <swiper-slide>
+          <img src="/assets/oferta1.jpg" alt="">
+          <ion-button>Generar Qr</ion-button>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/assets/oferta2.jpg" alt="">
+          <ion-button>Generar Qr</ion-button>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/assets/oferta3.jpg" alt="">
+          <ion-button>Generar Qr</ion-button>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/assets/oferta4.jpg" alt="">
+          <ion-button>Generar Qr</ion-button>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</ion-content>

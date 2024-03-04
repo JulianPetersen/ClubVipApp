@@ -1,0 +1,106 @@
+ion-content{
+    --background:rgb(245, 245, 245);
+    .header{
+        width: 100%;
+        display: flex;
+        .title{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                color:gray
+            }
+        }
+        .menu{
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ion-icon{
+                font-size: 25px;
+                color: gray;
+            }
+        }
+    }
+    .subscription{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .green{
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+        }
+        .red{
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+    .content{
+        ion-card{
+            margin-top:50px ;
+            display: flex;
+            .resumen{
+                width: 70%;
+                p{
+                    font-size: 18px;
+                    margin: 5px;
+                }
+                h2{
+                    font-weight: bold;
+                    margin: 5px;
+                }
+            }
+            .logo{
+                width: 30%;
+                background-color: #1EA896;
+                border-bottom-left-radius: 30px;
+                border-top-left-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 80px;
+                }
+            }
+        }
+        .menuProfile{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            .item{
+                width: 95%;
+                display: flex;
+                border: 1px solid gray;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                .title{
+                    width: 70%;
+                    display: flex;
+                    align-items: center;
+                    ion-icon{
+                        font-size: 30px;
+                        margin: 10px;
+                    }
+                }
+                .next{
+                    width: 30%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    ion-icon{
+                        font-size: 30px;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

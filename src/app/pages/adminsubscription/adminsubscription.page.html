@@ -1,0 +1,30 @@
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <div class="title">
+      <p>{{userInformation.name}} {{userInformation.apellido}}</p>
+    </div>
+    <div class="menu">
+    </div>
+  </div>
+
+  <div class="subscription">
+    <p
+    *ngIf="subscriptionActivated"  
+    [ngClass]="{'green':subscriptionActivated == true}"
+    >suscripcion Activa</p>
+
+    <p *ngIf="!subscriptionActivated"
+    [ngClass]="{'red':subscriptionActivated == false}">Suscripcion Inactiva</p>
+  </div>
+
+  <div class="text">
+    <p>Actualmete no cuentas con una suscripción, para poder generar cupones de descuento en tus negocios preferidos, puedes suscrbirte, tiene un costo de $10.000</p>
+  </div>
+
+  <div class="buttons">
+    <ion-button>Suscribirme</ion-button>
+  </div>
+</ion-content>
+
+

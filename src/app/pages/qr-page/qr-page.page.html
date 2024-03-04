@@ -1,0 +1,53 @@
+
+<ion-content [fullscreen]="true">
+  
+  <div class="container" *ngIf="subscriptionActivated">
+
+    <div class="text">
+      <h5>¡Felicitaciones, este QR tiene 10 minutos de duracion</h5>
+    </div>
+
+    <div class="text">
+      <p>Mostrale el Qr generado al vendedor para que pueda escanearlo</p>
+    </div>
+    <div class="qrCode">
+      <qr-code value={{valueQr}} size="300" errorCorrectionLevel="M"></qr-code>
+    </div>
+
+    <div class="button" (click)="goToHome()">
+      <ion-button>
+        Cerrar
+      </ion-button>
+    </div>
+  </div>
+
+
+  <div class="containerNotSubscription" *ngIf="!subscriptionActivated">
+
+    <div class="iconAllert">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+    </div>
+
+    <div class="iconAllert">
+      <h5>Tu suscripción no esta Avtiva</h5>
+    </div>
+
+    <div class="text">
+      <p>Recuerda que para generar códigos de descuentos debes tener tu suscripción Activa</p>
+    </div>
+
+    <div class="button" (click)="gotoActivatedSubscription()">
+      <ion-button>
+        Activar suscripcion
+      </ion-button>
+    </div>
+
+    <div class="button" (click)="goToHome()">
+      <ion-button>
+        Ir a pagina principal
+      </ion-button>
+    </div>
+  </div>
+  
+ 
+</ion-content>

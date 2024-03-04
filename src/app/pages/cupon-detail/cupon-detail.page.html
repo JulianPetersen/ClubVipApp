@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+
+    <div class="backbutton" (click)="backButton()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+
+    <div class="title">
+      <h4>{{this.comercio.name}}</h4>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="banner">
+      <img src="{{this.imgCupon}}" alt="">
+    </div>
+    <div class="description">
+      <p>{{description}}</p>
+    </div>
+
+    <div class="text">
+      <p>Recuerda estar en el negocio a la hora de generar el qr</p>
+    </div>
+
+    <div class="Button">
+      <ion-button (click)="goToGetQr()">Generar Qr</ion-button>
+    </div>
+  </div>
+  
+</ion-content>
